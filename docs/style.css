@@ -96,6 +96,21 @@ th { background: #f2f4f7; }
 }
 .nav-button.primary { background: var(--accent); color: white; border-color: var(--accent); }
 .footer { color: var(--muted); text-align: center; padding: 25px; font-size: .85rem; }
+
+.tutorial-intro { color: var(--muted); }
+.tutorial-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 18px 0 30px; }
+.tutorial-card {
+  display: block; background: #fff; border: 1px solid var(--border); border-radius: 11px;
+  padding: 17px; text-decoration: none; color: inherit;
+  transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+.tutorial-card:hover { transform: translateY(-2px); box-shadow: 0 7px 20px rgba(16,24,40,.08); border-color: #bfdbfe; }
+.tutorial-card h3 { color: var(--text); margin: 4px 0 6px; font-size: 1rem; }
+.tutorial-card p { color: var(--muted); margin: 0; font-size: .86rem; line-height: 1.5; }
+.tutorial-type { font-size: .68rem; font-weight: 800; letter-spacing: .07em; color: var(--accent); }
+.tutorial-card.video .tutorial-type { color: #b42318; }
+@media (max-width: 800px) { .tutorial-grid { grid-template-columns: 1fr; } }
+
 @media (max-width: 800px) {
   :root { --sidebar: 0px; }
   .sidebar { position: static; width: auto; }
