@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 5 — Final Project & CI/CD · Playwright Training</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="layout">
+<aside class="sidebar">
+  <div class="brand">Playwright Training</div>
+  <div class="brand-sub">5-Day Student Program</div>
+  <nav class="nav">
+    <div class="nav-title">Training</div>
+    <a href="index.html">🏠 Home</a>
+    <a href="student-study-plan.html">📖 Study Plan</a>
+    <div class="nav-title">Days</div>
+    <a href="day-1.html">Day 1 · Fundamentals</a>
+    <a href="day-2.html">Day 2 · UI Automation</a>
+    <a href="day-3.html">Day 3 · Framework</a>
+    <a href="day-4.html">Day 4 · API & Auth</a>
+    <a href="day-5.html">Day 5 · Final Project</a>
+  </nav>
+</aside>
+<main class="main"><div class="topbar"><a href="index.html">Playwright Training</a></div>
+<div class="container"><section class="hero"><span class="badge">DAY 5</span><h1>Final Project & CI/CD</h1><p>Hands-on learning and practice for your Playwright automation journey.</p></section>
+<h2>Objective</h2><p>Demonstrate that you can apply the week's learning without step-by-step implementation instructions.</p>
+<h2>Example Flow</h2><pre><code>Login
+ ↓
+Search product
+ ↓
+Open product
+ ↓
+Add to cart
+ ↓
+Checkout
+ ↓
+Place order
+ ↓
+Verify order</code></pre>
+<h2>Framework Requirements</h2><pre><code>tests/
+pages/
+fixtures/
+utils/
+test-data/
+auth/
+playwright.config.ts</code></pre>
+<ul><li>Page Object Model</li><li>Reliable locators</li><li>Assertions</li><li>Reusable methods</li><li>Test data</li><li>Authentication strategy</li><li>Proper waits</li><li>Configuration</li><li>Reporting</li></ul>
+<h2>Reporting</h2><pre><code>npx playwright show-report</code></pre>
+<h2>CI/CD Concept</h2><pre><code>Developer
+   ↓
+Git Push
+   ↓
+GitHub
+   ↓
+GitHub Actions
+   ↓
+Install dependencies
+   ↓
+Install Playwright
+   ↓
+Run tests
+   ↓
+Generate report</code></pre>
+<h2>Final Challenge</h2><p>Given a requirement such as “Automate user registration and login. The framework must support multiple environments and users. Tests should run independently and generate a report,” decide the locator strategy, Page Objects, fixtures, test data, authentication approach, assertions, configuration, execution and debugging strategy.</p>
+<h2>Success Criteria</h2><p>You do not need to memorize every Playwright API. You should be able to receive a requirement and independently design, implement, run, debug and refactor the automation.</p>
+<div class="nav-buttons"><a class="nav-button" href="day-4.html">← Day 4</a><a class="nav-button primary" href="student-study-plan.html">Study Plan →</a></div></div><div class="footer">Playwright Training · Student Edition</div></main></div></body></html>

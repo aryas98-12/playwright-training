@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 4 — API, Authentication & Debugging · Playwright Training</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="layout">
+<aside class="sidebar">
+  <div class="brand">Playwright Training</div>
+  <div class="brand-sub">5-Day Student Program</div>
+  <nav class="nav">
+    <div class="nav-title">Training</div>
+    <a href="index.html">🏠 Home</a>
+    <a href="student-study-plan.html">📖 Study Plan</a>
+    <div class="nav-title">Days</div>
+    <a href="day-1.html">Day 1 · Fundamentals</a>
+    <a href="day-2.html">Day 2 · UI Automation</a>
+    <a href="day-3.html">Day 3 · Framework</a>
+    <a href="day-4.html">Day 4 · API & Auth</a>
+    <a href="day-5.html">Day 5 · Final Project</a>
+  </nav>
+</aside>
+<main class="main"><div class="topbar"><a href="index.html">Playwright Training</a></div>
+<div class="container"><section class="hero"><span class="badge">DAY 4</span><h1>API, Authentication & Debugging</h1><p>Hands-on learning and practice for your Playwright automation journey.</p></section>
+<h2>Learning Objectives</h2><ul><li>Use Playwright for API calls.</li><li>Combine API setup with UI validation.</li><li>Understand authentication state.</li><li>Use network interception.</li><li>Diagnose failures systematically.</li></ul>
+<h2>API Testing</h2><pre><code>const response = await request.get('/users');
+expect(response.status()).toBe(200);</code></pre>
+<pre><code>const response = await request.post('/users', {
+    data: {
+        name: 'John',
+        email: 'john@test.com'
+    }
+});
+
+expect(response.status()).toBe(201);</code></pre>
+<h2>API + UI</h2><pre><code>API
+ ↓
+Create test data
+ ↓
+UI
+ ↓
+Verify behavior</code></pre>
+<p>Use API setup when it makes tests faster, less dependent on UI setup and easier to isolate.</p>
+<h2>Authentication</h2><pre><code>Login once
+    ↓
+Save authentication state
+    ↓
+Reuse authentication state
+    ↓
+Tests start authenticated</code></pre>
+<p>Learn <code>storageState</code> and understand setup projects/global setup conceptually.</p>
+<h2>Network Mocking</h2><pre><code>await page.route('**/api/users', async route => {
+    await route.fulfill({
+        status: 200,
+        body: JSON.stringify({ users: [] })
+    });
+});</code></pre>
+<h2>Debugging Challenge</h2><p>Fix a broken framework containing incorrect locators, missing awaits, incorrect assertions, hard waits, authentication problems, popup problems and flaky tests.</p><p><strong>For every fix, explain the root cause.</strong></p>
+<div class="nav-buttons"><a class="nav-button" href="day-3.html">← Day 3</a><a class="nav-button primary" href="day-5.html">Day 5 →</a></div></div><div class="footer">Playwright Training · Student Edition</div></main></div></body></html>

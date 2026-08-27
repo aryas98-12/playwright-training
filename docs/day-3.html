@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 3 — Framework Design & Page Object Model · Playwright Training</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="layout">
+<aside class="sidebar">
+  <div class="brand">Playwright Training</div>
+  <div class="brand-sub">5-Day Student Program</div>
+  <nav class="nav">
+    <div class="nav-title">Training</div>
+    <a href="index.html">🏠 Home</a>
+    <a href="student-study-plan.html">📖 Study Plan</a>
+    <div class="nav-title">Days</div>
+    <a href="day-1.html">Day 1 · Fundamentals</a>
+    <a href="day-2.html">Day 2 · UI Automation</a>
+    <a href="day-3.html">Day 3 · Framework</a>
+    <a href="day-4.html">Day 4 · API & Auth</a>
+    <a href="day-5.html">Day 5 · Final Project</a>
+  </nav>
+</aside>
+<main class="main"><div class="topbar"><a href="index.html">Playwright Training</a></div>
+<div class="container"><section class="hero"><span class="badge">DAY 3</span><h1>Framework Design & Page Object Model</h1><p>Hands-on learning and practice for your Playwright automation journey.</p></section>
+<h2>Learning Objective</h2><p>Move from “I can write a test” to “I can build maintainable automation.”</p>
+<h2>Recommended Structure</h2><pre><code>tests/
+pages/
+fixtures/
+utils/
+test-data/
+playwright.config.ts</code></pre>
+<h2>Page Object Model</h2><pre><code>export class LoginPage {
+    constructor(private page: Page) {}
+
+    username = this.page.getByLabel('Username');
+    password = this.page.getByLabel('Password');
+    loginButton = this.page.getByRole('button', {
+        name: 'Login'
+    });
+
+    async login(username: string, password: string) {
+        await this.username.fill(username);
+        await this.password.fill(password);
+        await this.loginButton.click();
+    }
+}</code></pre>
+<h2>Meaningful Page Methods</h2><pre><code>login()
+logout()
+searchUser()
+createUser()
+deleteUser()</code></pre>
+<div class="callout"><strong>Key idea:</strong> a Page Object should represent page/component behavior, not merely be a file containing locators.</div>
+<h2>Fixtures</h2><p>Understand the built-in <code>page</code>, <code>browser</code>, <code>context</code> and <code>request</code> fixtures, then learn why custom fixtures are useful.</p>
+<h2>Configuration</h2><p>Become comfortable with <code>baseURL</code>, screenshots, video, trace, retries, workers, projects, reporters and timeouts.</p>
+<h2>Assignment</h2><p>Create LoginPage, DashboardPage and UsersPage with corresponding tests. Avoid duplicated code, use meaningful assertions and keep tests readable.</p>
+<div class="nav-buttons"><a class="nav-button" href="day-2.html">← Day 2</a><a class="nav-button primary" href="day-4.html">Day 4 →</a></div></div><div class="footer">Playwright Training · Student Edition</div></main></div></body></html>

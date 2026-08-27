@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 1 — Playwright Fundamentals · Playwright Training</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="layout">
+<aside class="sidebar">
+  <div class="brand">Playwright Training</div>
+  <div class="brand-sub">5-Day Student Program</div>
+  <nav class="nav">
+    <div class="nav-title">Training</div>
+    <a href="index.html">🏠 Home</a>
+    <a href="student-study-plan.html">📖 Study Plan</a>
+    <div class="nav-title">Days</div>
+    <a href="day-1.html">Day 1 · Fundamentals</a>
+    <a href="day-2.html">Day 2 · UI Automation</a>
+    <a href="day-3.html">Day 3 · Framework</a>
+    <a href="day-4.html">Day 4 · API & Auth</a>
+    <a href="day-5.html">Day 5 · Final Project</a>
+  </nav>
+</aside>
+<main class="main"><div class="topbar"><a href="index.html">Playwright Training</a></div>
+<div class="container"><section class="hero"><span class="badge">DAY 1</span><h1>Playwright Fundamentals</h1><p>Hands-on learning and practice for your Playwright automation journey.</p></section>
+<h2>Learning Objectives</h2><ul><li>Understand Playwright and its architecture.</li><li>Create and run a Playwright project.</li><li>Choose reliable locators.</li><li>Perform actions and write assertions.</li><li>Understand auto-waiting.</li></ul>
+<h2>1. Playwright Architecture</h2><pre><code>Browser
+   ↓
+Browser Context
+   ↓
+Page
+   ↓
+Locator
+   ↓
+Action
+   ↓
+Assertion</code></pre>
+<h2>2. Project Setup</h2><pre><code>npm init playwright@latest
+npx playwright test
+npx playwright test --headed
+npx playwright show-report</code></pre>
+<h2>3. Basic Test</h2><pre><code>import { test, expect } from '@playwright/test';
+
+test('verify page title', async ({ page }) => {
+    await page.goto('https://example.com');
+    await expect(page).toHaveTitle(/Example/);
+});</code></pre>
+<h2>4. Locators</h2><p>Practice these first:</p><pre><code>page.getByRole()
+page.getByLabel()
+page.getByPlaceholder()
+page.getByText()
+page.getByTestId()
+page.locator()</code></pre>
+<h2>5. Actions & Assertions</h2><pre><code>await page.getByLabel('Email').fill('test@gmail.com');
+await page.getByRole('button', { name: 'Submit' }).click();
+
+await expect(page.getByText('Success')).toBeVisible();
+await expect(page).toHaveURL(/dashboard/);</code></pre>
+<div class="callout"><strong>Remember:</strong> avoid fixed waits such as <code>page.waitForTimeout(5000)</code> when Playwright can wait for the expected condition.</div>
+<h2>Assignment</h2><p>Automate: open application → login → verify dashboard → navigate to profile → update profile → verify success → logout.</p>
+<div class="nav-buttons"><a class="nav-button" href="student-study-plan.html">← Study Plan</a><a class="nav-button primary" href="day-2.html">Day 2 →</a></div></div><div class="footer">Playwright Training · Student Edition</div></main></div></body></html>

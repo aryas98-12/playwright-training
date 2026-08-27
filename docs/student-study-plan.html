@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Study Plan · Playwright Training</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="layout">
+<aside class="sidebar">
+  <div class="brand">Playwright Training</div>
+  <div class="brand-sub">5-Day Student Program</div>
+  <nav class="nav">
+    <div class="nav-title">Training</div>
+    <a href="index.html">🏠 Home</a>
+    <a href="student-study-plan.html">📖 Study Plan</a>
+    <div class="nav-title">Days</div>
+    <a href="day-1.html">Day 1 · Fundamentals</a>
+    <a href="day-2.html">Day 2 · UI Automation</a>
+    <a href="day-3.html">Day 3 · Framework</a>
+    <a href="day-4.html">Day 4 · API & Auth</a>
+    <a href="day-5.html">Day 5 · Final Project</a>
+  </nav>
+</aside>
+<main class="main"><div class="topbar"><a href="index.html">Playwright Training</a></div>
+<div class="container">
+<section class="hero"><span class="badge">STUDENT GUIDE</span><h1>5-Day Student Study Plan</h1>
+<p>Your goal is to become productive with Playwright in one week by combining focused learning with daily hands-on automation.</p></section>
+<h2>Your Goal</h2>
+<p>By the end of the week, you should be able to take a manual test case and independently convert it into a reliable Playwright automation test.</p>
+<div class="callout"><strong>Think like an automation engineer:</strong> understand the requirement, choose reliable locators, design maintainable code, validate behavior, debug failures and improve reliability.</div>
+<h2>Day 1 — Playwright Fundamentals</h2>
+<ul><li>Playwright Test Runner</li><li>Browser, Context and Page</li><li>Locators</li><li>Actions and assertions</li><li>Auto-waiting</li><li>Project structure</li></ul>
+<h3>Commands</h3><pre><code>npm init playwright@latest
+npx playwright test
+npx playwright test --headed
+npx playwright show-report</code></pre>
+<h3>Locator priority</h3><pre><code>page.getByRole()
+page.getByLabel()
+page.getByPlaceholder()
+page.getByText()
+page.getByTestId()
+page.locator()</code></pre>
+<h3>Assignment</h3><p>Automate: open application → login → verify dashboard → navigate to profile → update profile → verify success → logout.</p>
+
+<h2>Day 2 — Real UI Automation</h2>
+<ul><li>Dropdowns</li><li>Checkboxes and radio buttons</li><li>Dialogs</li><li>Multiple tabs</li><li>Frames</li><li>File uploads</li><li>Keyboard and mouse actions</li><li>Debugging</li></ul>
+<h3>Assignment</h3><p>Automate a form containing text fields, dropdown, checkbox, radio button, file upload, iframe, dialog/popup, submit and success validation.</p>
+
+<h2>Day 3 — Framework & Page Object Model</h2>
+<ul><li>Page Object Model</li><li>Reusable methods</li><li>Fixtures</li><li>Configuration</li><li>Test organization</li></ul>
+<pre><code>tests/
+pages/
+fixtures/
+utils/
+test-data/
+playwright.config.ts</code></pre>
+<h3>Assignment</h3><p>Create LoginPage, DashboardPage and UsersPage, with corresponding test files. Avoid duplicated code and use meaningful assertions.</p>
+
+<h2>Day 4 — API, Authentication & Debugging</h2>
+<ul><li>request.get/post/put/delete</li><li>API + UI testing</li><li>Authentication state and storageState</li><li>Network interception</li><li>Playwright Inspector and Trace Viewer</li></ul>
+<h3>Debugging challenge</h3><p>Fix a framework containing incorrect locators, missing awaits, bad assertions, hard waits, authentication problems, popup problems and flaky tests. Explain the root cause of each failure.</p>
+
+<h2>Day 5 — Final Project</h2>
+<p>Build a small automation framework for a flow such as:</p>
+<pre><code>Login
+ ↓
+Search product
+ ↓
+Open product
+ ↓
+Add to cart
+ ↓
+Checkout
+ ↓
+Place order
+ ↓
+Verify order</code></pre>
+<h3>Framework requirements</h3>
+<ul><li>Page Object Model</li><li>Reliable locators</li><li>Assertions</li><li>Reusable methods</li><li>Test data</li><li>Authentication strategy</li><li>Proper waits</li><li>Configuration</li><li>Reporting</li></ul>
+
+<h2>Daily Self-Check</h2>
+<h3>Day 1</h3><ul class="checklist">
+<li>□ I can create a Playwright project.</li><li>□ I understand Browser, Context and Page.</li><li>□ I can choose appropriate locators.</li><li>□ I can perform common actions.</li><li>□ I can write assertions.</li><li>□ I understand auto-waiting.</li></ul>
+<h3>Day 2</h3><ul class="checklist">
+<li>□ I can automate forms.</li><li>□ I can handle dropdowns, checkboxes and radio buttons.</li><li>□ I can handle dialogs, tabs and iframes.</li><li>□ I can debug a failing test.</li></ul>
+<h3>Day 3</h3><ul class="checklist">
+<li>□ I understand Page Object Model.</li><li>□ I can create Page Objects.</li><li>□ I understand fixtures and configuration.</li><li>□ I can organize tests properly.</li></ul>
+<h3>Day 4</h3><ul class="checklist">
+<li>□ I can send API requests.</li><li>□ I understand API + UI testing.</li><li>□ I understand authentication state and storageState.</li><li>□ I understand network interception.</li><li>□ I can investigate flaky tests.</li></ul>
+<h3>Day 5</h3><ul class="checklist">
+<li>□ I can build a small framework independently.</li><li>□ I can write maintainable tests.</li><li>□ I can run tests from the command line.</li><li>□ I can investigate reports.</li><li>□ I understand retries and parallel execution.</li><li>□ I understand the basic CI/CD workflow.</li></ul>
+
+<h2>Final Success Criteria</h2>
+<p>When given a requirement such as <strong>“Automate the login and checkout flow”</strong>, you should be able to independently move through:</p>
+<pre><code>Requirement
+ ↓
+Identify test scenarios
+ ↓
+Inspect application
+ ↓
+Choose locators
+ ↓
+Design Page Objects
+ ↓
+Decide API/UI setup
+ ↓
+Write test
+ ↓
+Add assertions
+ ↓
+Run
+ ↓
+Debug
+ ↓
+Refactor
+ ↓
+Commit</code></pre>
+<div class="nav-buttons"><a class="nav-button" href="index.html">← Home</a><a class="nav-button primary" href="day-1.html">Day 1 →</a></div></div><div class="footer">Playwright Training · Student Edition</div></main></div></body></html>
