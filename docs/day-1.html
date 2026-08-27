@@ -53,5 +53,22 @@ await page.getByRole('button', { name: 'Submit' }).click();
 await expect(page.getByText('Success')).toBeVisible();
 await expect(page).toHaveURL(/dashboard/);</code></pre>
 <div class="callout"><strong>Remember:</strong> avoid fixed waits such as <code>page.waitForTimeout(5000)</code> when Playwright can wait for the expected condition.</div>
+<h2>🎓 Recommended Short Tutorials</h2><p class="tutorial-intro">Use these resources as focused pre-reading or revision. Start with the official Playwright resource; use the video when you want a visual walkthrough.</p><div class="tutorial-grid"><a class="tutorial-card" href="https://playwright.dev/docs/intro" target="_blank" rel="noopener noreferrer">
+          <div class="tutorial-type">📘 OFFICIAL PLAYWRIGHT</div>
+          <h3>Playwright Getting Started ↗</h3>
+          <p>Official Playwright quick-start guide — use this as the primary setup reference.</p>
+        </a><a class="tutorial-card" href="https://playwright.dev/docs/locators" target="_blank" rel="noopener noreferrer">
+          <div class="tutorial-type">📘 OFFICIAL PLAYWRIGHT</div>
+          <h3>Playwright Locators ↗</h3>
+          <p>Official locator guide covering getByRole, getByLabel, getByText, getByTestId and locator strategy.</p>
+        </a><a class="tutorial-card" href="https://playwright.dev/docs/test-assertions" target="_blank" rel="noopener noreferrer">
+          <div class="tutorial-type">📘 OFFICIAL PLAYWRIGHT</div>
+          <h3>Playwright Assertions ↗</h3>
+          <p>Official web-first assertions guide. It explains retrying assertions and why they reduce flaky checks.</p>
+        </a><a class="tutorial-card video" href="https://www.youtube.com/watch?v=kqjyWGmckTo" target="_blank" rel="noopener noreferrer">
+          <div class="tutorial-type">🎥 SHORT VIDEO</div>
+          <h3>Assertions in Playwright — WishInfinite ↗</h3>
+          <p>YouTube tutorial with examples of common and auto-retrying assertions.</p>
+        </a></div>
 <h2>Assignment</h2><p>Automate: open application → login → verify dashboard → navigate to profile → update profile → verify success → logout.</p>
 <div class="nav-buttons"><a class="nav-button" href="student-study-plan.html">← Study Plan</a><a class="nav-button primary" href="day-2.html">Day 2 →</a></div></div><div class="footer">Playwright Training · Student Edition</div></main></div></body></html>
